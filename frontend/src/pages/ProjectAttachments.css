@@ -1,0 +1,174 @@
+.attachments-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #f5f5f5;
+    overflow-y: auto;
+    font-family: Arial, sans-serif;
+}
+
+.attachments-main {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    min-height: 100vh;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.attachments-header {
+    margin-bottom: 30px;
+}
+
+.attachments-header h1 {
+    margin: 0;
+    font-size: 32px;
+    color: black;
+}
+
+.attachments-header p {
+    margin-top: 8px;
+    color: #666;
+    font-size: 16px;
+}
+
+.attachments-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+}
+
+.attachments-content h2 {
+    margin: 0 0 15px;
+    font-size: 20px;
+    color: black;
+}
+
+.attachment-project-select {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.attachment-project-select:focus {
+    border-color: black;
+}
+
+.attachment-form-title {
+    margin-top: 35px !important;
+}
+
+.attachment-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.attachment-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.attachment-form input:focus {
+    border-color: black;
+}
+
+.attachment-form button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    background: black;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.attachment-form button:hover {
+    background: #222;
+}
+
+.attachment-message {
+    margin: 15px 0;
+    color: #555;
+}
+
+.attachment-list-title {
+    margin-top: 35px !important;
+}
+
+.attachments-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.attachments-table th,
+.attachments-table td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.attachments-table th {
+    color: #555;
+    font-size: 14px;
+}
+
+.attachments-table td {
+    color: #333;
+    font-size: 14px;
+}
+
+.attachments-table a {
+    color: black;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .attachment-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .attachment-form button {
+        width: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .attachments-main {
+        padding: 25px;
+    }
+
+    .attachment-form {
+        grid-template-columns: 1fr;
+    }
+
+    .attachment-form button {
+        width: 140px;
+    }
+}
+
+@media (max-width: 650px) {
+    .attachments-main {
+        margin-left: 0;
+        width: 100%;
+        padding: 25px;
+        padding-top: 100px;
+    }
+}

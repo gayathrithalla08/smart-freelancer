@@ -1,0 +1,128 @@
+.invoices-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #f5f5f5;
+    overflow-y: auto;
+    font-family: Arial, sans-serif;
+}
+
+.invoices-main {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    min-height: 100vh;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.invoices-header {
+    margin-bottom: 30px;
+}
+
+.invoices-header h1 {
+    margin: 0;
+    font-size: 32px;
+    color: black;
+}
+
+.invoices-header p {
+    margin-top: 8px;
+    color: #666;
+    font-size: 16px;
+}
+
+.invoice-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+}
+
+.invoice-content h2 {
+    margin: 0 0 20px;
+    color: black;
+    font-size: 20px;
+}
+
+.invoice-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.invoice-form input,
+.invoice-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.invoice-form input:focus,
+.invoice-form select:focus {
+    border-color: black;
+}
+
+.invoice-form button {
+    width: 140px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: black;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.invoice-form button:hover {
+    background: #222;
+}
+
+.invoices-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.invoices-table th,
+.invoices-table td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.invoices-table th {
+    color: #555;
+    font-size: 14px;
+}
+
+.invoices-table td {
+    color: #333;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .invoices-main {
+        padding: 25px;
+    }
+
+    .invoice-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .invoices-main {
+        margin-left: 0;
+        width: 100%;
+        padding: 25px;
+        padding-top: 100px;
+    }
+}

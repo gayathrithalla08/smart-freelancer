@@ -1,0 +1,113 @@
+.projects-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #f5f5f5;
+    overflow-y: auto;
+    font-family: Arial, sans-serif;
+}
+
+.projects-main {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    min-height: 100vh;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.projects-header {
+    margin-bottom: 30px;
+}
+
+.projects-header h1 {
+    margin: 0;
+    font-size: 32px;
+    color: black;
+}
+
+.projects-header p {
+    margin-top: 8px;
+    color: #666;
+}
+
+.projects-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+}
+
+.projects-content h2 {
+    margin-top: 0;
+    color: black;
+}
+
+.project-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.project-form input,
+.project-form textarea,
+.project-form select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.project-form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.project-form button {
+    width: 140px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    justify-self: end;
+}
+
+.project-form button:hover {
+    background: #222;
+}
+
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.projects-table th,
+.projects-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.projects-table th {
+    color: #555;
+    font-size: 14px;
+}
+
+.project-status {
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .projects-page {
+        padding: 25px;
+    }
+
+    .project-form {
+        grid-template-columns: 1fr;
+    }
+}

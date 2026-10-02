@@ -1,0 +1,60 @@
+const jwt = require("jsonwebtoken");
+
+const authMiddleware = (req, res, next) => {
+    try {
+        // Get token from Authorization header
+        const authHeader = req.headers.authorization;
+
+        if (!authHeader) {
+            return res.status(401).json({
+                message: "Authentication token is required"
+            });
+        }
+
+        // Expected format:
+        // Bearer TOKEN
+        const token = authHeader.split(" ")[1];
+
+        if (!token) {
+            return res.status(401).json({
+                message: "Invalid authentication format"
+            });
+        }
+
+        // Verify token
+        const decoded = jwt.verify(
+            token,
+            "freelancer_secret_key"
+        );
+
+        // Store logged-in user information
+        req.user = decoded;
+
+        next();
+
+    } catch (error) {
+        return res.status(401).json({
+            message: "Invalid or expired token"
+        });
+    }
+};
+
+const roleMiddleware = (allowedRoles) => {
+    return (req, res, next) => {
+        if (!req.user) {
+            return res.status(401).json({
+                message: "Authentication required"
+            });
+        }
+
+        if (!allowedRoles.includes(req.user.role)) {
+            return res.status(403).json({
+                message: "Access denied"
+            });
+        }
+
+        next();
+    };
+};
+
+module.exports = {authMiddleware,roleMiddleware};
