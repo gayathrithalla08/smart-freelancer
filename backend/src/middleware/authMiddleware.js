@@ -1,8 +1,8 @@
+require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
 const authMiddleware = (req, res, next) => {
     try {
-        // Get token from Authorization header
         const authHeader = req.headers.authorization;
 
         if (!authHeader) {
@@ -11,8 +11,6 @@ const authMiddleware = (req, res, next) => {
             });
         }
 
-        // Expected format:
-        // Bearer TOKEN
         const token = authHeader.split(" ")[1];
 
         if (!token) {
@@ -21,13 +19,11 @@ const authMiddleware = (req, res, next) => {
             });
         }
 
-        // Verify token
         const decoded = jwt.verify(
             token,
-            "freelancer_secret_key"
+            process.env.JWT_SECRET
         );
 
-        // Store logged-in user information
         req.user = decoded;
 
         next();
@@ -57,4 +53,7 @@ const roleMiddleware = (allowedRoles) => {
     };
 };
 
-module.exports = {authMiddleware,roleMiddleware};
+module.exports = {
+    authMiddleware,
+    roleMiddleware
+};

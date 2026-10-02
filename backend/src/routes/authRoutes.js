@@ -2,6 +2,7 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const db = require("../database/db");
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 const router = express.Router();
 // Register user
@@ -133,7 +134,7 @@ router.post("/login", async (req, res) => {
                 user_id: user.id,
                 role: user.role
             },
-            "freelancer_secret_key",
+              process.env.JWT_SECRET,
             {
                 expiresIn: "1d"
             }
