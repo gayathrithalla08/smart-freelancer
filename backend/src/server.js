@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const db = require("./database/db");
+require("./database/init");
+
 const clientRoutes = require("./routes/clientRoutes");
 const projectRoutes = require("./routes/projectRoutes");
 const taskRoutes = require("./routes/taskRoutes");
@@ -30,7 +32,9 @@ app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/history", historyRoutes);
 app.use("/api/attachments", attachmentRoutes);
 app.use("/api/auth", authRoutes);
-const PORT = 5000;
+
+
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
     console.log(`Server running on ${PORT}`);
