@@ -8,10 +8,6 @@ function Sidebar() {
             <h2>Smart Freelancer</h2>
 
             <nav>
-                <Link to="/home">
-                    Home
-                </Link>
-
                 <Link to="/dashboard">
                     Dashboard
                 </Link>

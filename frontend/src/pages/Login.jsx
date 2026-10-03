@@ -32,7 +32,7 @@ function Login() {
 
             localStorage.setItem("token", data.token);
 
-           window.location.href = "/home";
+           window.location.href = "/dashboard";
 
         } catch (error) {
             console.error(error);
