@@ -120,3 +120,79 @@
         padding: 40px;
     }
 }
+
+.demo-credentials {
+    margin-top: 24px;
+    padding: 18px;
+    background: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+}
+
+.demo-credentials h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #111;
+}
+
+.demo-credentials > p {
+    margin: 0 0 16px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.demo-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+}
+
+.demo-field div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.demo-field span {
+    font-size: 12px;
+    color: #777;
+}
+
+.demo-field strong {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+    color: #222;
+}
+
+.demo-field button,
+.demo-login-button {
+    padding: 9px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.demo-field button:hover,
+.demo-login-button:hover {
+    background: #333;
+}
+
+.demo-login-button {
+    width: 100%;
+    margin-top: 14px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
