@@ -32,3 +32,33 @@
 .sidebar a:hover {
     background: #222;
 }
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logout {
+    width: 100%;
+    margin-top: auto;
+    padding: 12px 16px;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sidebar-logout:hover {
+    background: #333;
+}
